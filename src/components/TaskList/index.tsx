@@ -1,6 +1,6 @@
 import { PlusCircle, Trash } from 'phosphor-react';
 import { useState } from 'react';
-//import { Transition } from '../Transition';
+import { Transition } from '../Transition';
 
 import './style.css';
 
@@ -14,6 +14,7 @@ export function TaskList() {
 
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
+  //const [visible, setVisible] = useState(false);
 
   function handleCreateNewTask() {
     
@@ -32,6 +33,7 @@ export function TaskList() {
     //console.log(newTask)
     
     setNewTaskTitle('');
+    //setVisible(true)
   }
 
   function handleToggleTaskDone(id: number) {
@@ -81,22 +83,19 @@ export function TaskList() {
         </div>
       </div>
 
-      {/*<Transition />*/}
-
       <main>
         <ul>
           {tasks.map((task) => (
             <li key={task.id}>
             <div className={task.isComplete ? 'completed' : ''} data-testid="task" >
-              <div className='checkbox-container' >
+              <label className="checkbox-container">
                 <input 
                   type="checkbox" 
-                  id="checkbox" 
                   checked={task.isComplete}
                   onClick={() => handleToggleTaskDone(task.id)}
                 />
-                <label htmlFor="checkbox"></label>
-                </div>
+                <span className="checkmark"></span>
+              </label>
               <p>{task.title}</p>
             </div>
 
