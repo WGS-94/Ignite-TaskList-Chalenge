@@ -1,6 +1,6 @@
+import { useState, KeyboardEvent } from 'react';
 import { PlusCircle, Trash } from 'phosphor-react';
-import { useState } from 'react';
-import { Transition } from '../Transition';
+//import { Transition } from '../Transition';
 
 import './style.css';
 
@@ -10,11 +10,27 @@ interface Task {
   isComplete: boolean;
 }
 
-export function TaskList() {
+interface Props {
+  onEnter: (taskName: string) => void
+}
+
+export function TaskList({ onEnter }: Props) {
 
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
   //const [visible, setVisible] = useState(false);
+  const [countTask, setCountTask]= useState(0);
+  const [countTaskDone, setCountTaskDone]= useState(0);
+
+  const IncrementTask = () => { setCountTask(countTask + 1)};
+  const DecreaseTask = () => { setCountTask(countTask - 1)};
+
+  const handleKeyUp = (e: KeyboardEvent) => {
+    if(e.code === 'Enter' && newTaskTitle !== '') {
+        onEnter(newTaskTitle);
+        setNewTaskTitle('');
+    }
+}
 
   function handleCreateNewTask() {
     
@@ -34,6 +50,7 @@ export function TaskList() {
     
     setNewTaskTitle('');
     //setVisible(true)
+    IncrementTask();
   }
 
   function handleToggleTaskDone(id: number) {
@@ -44,6 +61,7 @@ export function TaskList() {
     } : task);
 
     setTasks(tasksCompleted);
+    setCountTaskDone(countTaskDone + 1);
   }
 
   function handleRemoveTask(id: number) {
@@ -52,6 +70,7 @@ export function TaskList() {
     const filterTasks = tasks.filter(task => task.id !== id);
 
     setTasks(filterTasks);
+    DecreaseTask()
   }
 
   return (
@@ -63,6 +82,7 @@ export function TaskList() {
             placeholder="Adicione uma nova tarefa" 
             onChange={(e) => setNewTaskTitle(e.target.value)}
             value={newTaskTitle}
+            onKeyUp={handleKeyUp}
             required
           />
           <button type="submit" data-testid="add-task-button" onClick={handleCreateNewTask}>
@@ -75,11 +95,11 @@ export function TaskList() {
       <div className="task-created-and-done">
         <div className="task-counter">
           <p>Tarefas criadas</p>
-          <span>0</span>
+          <span>{countTask}</span>
         </div>
         <div className="task-counter">
           <p>Concluídas</p>
-          <span>0</span>
+          <span>{countTaskDone} de {countTask}</span>
         </div>
       </div>
 

@@ -102,11 +102,11 @@ section.task-list header {
 }
 
 .task-created-and-done .task-counter span {
-  width: 24px; /*52*/
+  width: 52px; /*52*/
   height: 19px;
   background-color: var(--gray-400);
   color: var(--gray-200);
-  border-radius: 50%;
+  border-radius: 8px;
   display: inline-block;
 
   display: flex;
