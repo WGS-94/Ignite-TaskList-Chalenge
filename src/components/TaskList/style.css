@@ -149,8 +149,8 @@ main ul li div p {
   color: var(--gray-100);
 }
 
-main.completed p {  
-  text-decoration:line-through;
+main ul li .completed p {  
+  text-decoration: line-through;
   opacity: 0.6;
 
 }

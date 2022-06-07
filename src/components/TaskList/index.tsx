@@ -1,6 +1,6 @@
 import { PlusCircle, Trash } from 'phosphor-react';
 import { useState } from 'react';
-import { Transition } from '../Transition';
+//import { Transition } from '../Transition';
 
 import './style.css';
 
@@ -29,7 +29,7 @@ export function TaskList() {
 
     setTasks(oldState => [...oldState, newTask]);
 
-    console.log(newTask)
+    //console.log(newTask)
     
     setNewTaskTitle('');
   }
@@ -96,7 +96,7 @@ export function TaskList() {
                   onClick={() => handleToggleTaskDone(task.id)}
                 />
                 <label htmlFor="checkbox"></label>
-              </div>
+                </div>
               <p>{task.title}</p>
             </div>
 
