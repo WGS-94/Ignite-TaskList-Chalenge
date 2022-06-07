@@ -22,8 +22,8 @@ export function TaskList({ onEnter }: Props) {
   const [countTask, setCountTask]= useState(0);
   const [countTaskDone, setCountTaskDone]= useState(0);
 
-  const IncrementTask = () => { setCountTask(countTask + 1)};
-  const DecreaseTask = () => { setCountTask(countTask - 1)};
+  const IncrementTaskByCreate = () => { setCountTask(countTask + 1)};
+  const DecreaseTaskByRemove = () => { setCountTask(countTask - 1)};
 
   const handleKeyUp = (e: KeyboardEvent) => {
     if(e.code === 'Enter' && newTaskTitle !== '') {
@@ -50,7 +50,7 @@ export function TaskList({ onEnter }: Props) {
     
     setNewTaskTitle('');
     //setVisible(true)
-    IncrementTask();
+    IncrementTaskByCreate();
   }
 
   function handleToggleTaskDone(id: number) {
@@ -61,17 +61,16 @@ export function TaskList({ onEnter }: Props) {
     } : task);
 
     setTasks(tasksCompleted);
-    setCountTaskDone(countTaskDone + 1);
+    setCountTaskDone(countTaskDone + 1 || countTaskDone - 1);
   }
 
   function handleRemoveTask(id: number) {
-    // Remova uma task da listagem pelo ID
 
     const filterTasks = tasks.filter(task => task.id !== id);
 
     setTasks(filterTasks);
-    DecreaseTask()
-    setCountTaskDone(countTaskDone - 1);
+    DecreaseTaskByRemove()
+    //setCountTaskDone(countTaskDone - 1);
   }
 
   return (
