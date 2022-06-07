@@ -1,0 +1,31 @@
+main {
+  margin-top: 2rem;
+  border-top: 1px solid var(--gray-300);
+  border-radius: 8px;
+  height: 244px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main img {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1rem;
+}
+
+main h1 {
+  font-size: 1rem;
+  color: var(--gray-300);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+main p {
+  font-size: 1rem;
+  color: var(--gray-300);
+  font-weight: 400;
+  line-height: 1.4;
+}
