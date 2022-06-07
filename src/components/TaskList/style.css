@@ -132,6 +132,8 @@ main ul li {
   padding: 1rem;
 
   border-radius: 8px;
+
+  margin-bottom: 0.75rem;
 }
 
 main ul li div {
