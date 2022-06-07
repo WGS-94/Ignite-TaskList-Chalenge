@@ -30,7 +30,7 @@ Nesse desafio, você vai desenvolver uma aplicação de controle de tarefas no e
 
 <!--https://www.figma.com/file/8n9339j7p3LTzWyZdVM9C3/ToDo-List-(Copy)?node-id=43%3A88 -->
 
-## 🖼️ Imagens do Projeto
+## 🖼️ Imagens do Desafio
 <!--
 <div align="center">
   <img src="https://user-images.githubusercontent.com/87288949/171734865-0a9a1673-8cc5-4289-afe1-8f8e736359fb.PNG">
