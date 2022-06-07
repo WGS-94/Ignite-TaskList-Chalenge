@@ -71,6 +71,7 @@ export function TaskList({ onEnter }: Props) {
 
     setTasks(filterTasks);
     DecreaseTask()
+    setCountTaskDone(countTaskDone - 1);
   }
 
   return (
@@ -93,11 +94,11 @@ export function TaskList({ onEnter }: Props) {
       </header>
 
       <div className="task-created-and-done">
-        <div className="task-counter">
+        <div className="created-task-counter">
           <p>Tarefas criadas</p>
           <span>{countTask}</span>
         </div>
-        <div className="task-counter">
+        <div className="done-task-counter">
           <p>Concluídas</p>
           <span>{countTaskDone} de {countTask}</span>
         </div>

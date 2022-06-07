@@ -86,22 +86,44 @@ section.task-list header {
 
 }
 
-.task-created-and-done .task-counter {
+.task-created-and-done {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.created-task-counter {
+  display: flex;
   gap: 0.5rem;
 }
 
-.task-created-and-done .task-counter p {
+.done-task-counter {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-created-and-done .created-task-counter p {
   color: var(--blue);
 }
 
-.task-created-and-done .task-counter p > p {
+.task-created-and-done .done-task-counter p {
   color: var(--purple);
 }
 
-.task-created-and-done .task-counter span {
+.task-created-and-done .created-task-counter span {
+  width: 24px; /*52*/
+  height: 19px;
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  border-radius: 8px;
+  display: inline-block;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-created-and-done .done-task-counter span {
   width: 52px; /*52*/
   height: 19px;
   background-color: var(--gray-400);
