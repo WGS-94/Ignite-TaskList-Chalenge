@@ -1,6 +1,6 @@
 import { useState, KeyboardEvent } from 'react';
 import { PlusCircle, Trash } from 'phosphor-react';
-//import { Transition } from '../Transition';
+import { Transition } from '../Transition';
 
 import './style.css';
 
@@ -11,14 +11,13 @@ interface Task {
 }
 
 interface Props {
-  onEnter: (taskName: string) => void
+  onEnter: (newTaskTitle: string) => void
 }
 
 export function TaskList({ onEnter }: Props) {
 
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
-  //const [visible, setVisible] = useState(false);
   const [countTask, setCountTask]= useState(0);
   const [countTaskDone, setCountTaskDone]= useState(0);
 
@@ -45,11 +44,8 @@ export function TaskList({ onEnter }: Props) {
     }
 
     setTasks(oldState => [...oldState, newTask]);
-
-    //console.log(newTask)
     
     setNewTaskTitle('');
-    //setVisible(true)
     IncrementTaskByCreate();
   }
 
@@ -60,8 +56,16 @@ export function TaskList({ onEnter }: Props) {
       isComplete: !task.isComplete
     } : task);
 
+    for(let i in tasksCompleted) {
+      if (tasksCompleted[i].id === id && tasksCompleted[i].isComplete === true) {
+        setCountTaskDone(countTaskDone + 1)
+      }else if (tasksCompleted[i].id === id && tasksCompleted[i].isComplete === false) {
+        setCountTaskDone(countTaskDone - 1)
+      }
+    }
+
     setTasks(tasksCompleted);
-    setCountTaskDone(countTaskDone + 1 || countTaskDone - 1);
+    
   }
 
   function handleRemoveTask(id: number) {
@@ -70,7 +74,7 @@ export function TaskList({ onEnter }: Props) {
 
     setTasks(filterTasks);
     DecreaseTaskByRemove()
-    //setCountTaskDone(countTaskDone - 1);
+    setCountTaskDone(countTaskDone - 1);
   }
 
   return (
@@ -103,6 +107,7 @@ export function TaskList({ onEnter }: Props) {
         </div>
       </div>
 
+    {tasks.length > 0 ?
       <main>
         <ul>
           {tasks.map((task) => (
@@ -126,6 +131,9 @@ export function TaskList({ onEnter }: Props) {
           ))}
         </ul>
       </main>
+      : (
+        <Transition />
+      )}
     </section>
   )
 }
