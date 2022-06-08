@@ -49,7 +49,7 @@ Nesse desafio, você vai desenvolver uma aplicação de controle de tarefas no e
 
 * [ReactJS](https://pt-br.reactjs.org/tutorial/tutorial.html)
   * [Vite](https://www.npmjs.com/package/styled-components) - Biblioteca CSS in JS
-  * [phosphoricons](https://phosphoricons.com/)
+  * [phosphoricons](https://phosphoricons.com/) - Biblioteca for Icons in JS
 * [TypeScript](https://www.typescriptlang.org/)
 
 <!--### Tools para criar API Fake
@@ -61,7 +61,7 @@ Nesse desafio, você vai desenvolver uma aplicação de controle de tarefas no e
 $ git clone https://github.com/WGS-94/Ignite-TaskList-Chalenge
 # ou use a opção de download.
 # Acesse a pasta Ignite-TaskList-Chalenge
-$ cd Dt-Money-Transation
+$ cd Ignite-TaskList-Chalenge
 # Instale as dependências
 $ yarn install
 ou
