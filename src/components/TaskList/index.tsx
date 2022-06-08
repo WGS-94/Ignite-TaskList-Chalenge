@@ -1,4 +1,4 @@
-import { useState, KeyboardEvent } from 'react';
+import { useState } from 'react';
 import { PlusCircle, Trash } from 'phosphor-react';
 import { Transition } from '../Transition';
 
