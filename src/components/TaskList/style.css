@@ -122,6 +122,19 @@ section.task-list header {
   align-items: center;
 }
 
+.task-created-and-done .done-task-counter b {
+  width: 24px; /*52*/
+  height: 19px;
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  border-radius: 8px;
+  display: inline-block;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .task-created-and-done .done-task-counter span {
   width: 52px; /*52*/
   height: 19px;

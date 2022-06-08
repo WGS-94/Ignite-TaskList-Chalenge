@@ -96,7 +96,11 @@ export function TaskList() {
         </div>
         <div className="done-task-counter">
           <p>Concluídas</p>
-          <span>{countTaskDone} de {countTask}</span>
+          {countTaskDone > 0 ? 
+            <span>{countTaskDone} de {countTask}</span>
+          : (
+            <b>0</b>
+          )}
         </div>
       </div>
 
