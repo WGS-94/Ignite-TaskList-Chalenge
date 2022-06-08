@@ -10,11 +10,7 @@ interface Task {
   isComplete: boolean;
 }
 
-interface Props {
-  onEnter: (newTaskTitle: string) => void
-}
-
-export function TaskList({ onEnter }: Props) {
+export function TaskList() {
 
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
@@ -23,13 +19,6 @@ export function TaskList({ onEnter }: Props) {
 
   const IncrementTaskByCreate = () => { setCountTask(countTask + 1)};
   const DecreaseTaskByRemove = () => { setCountTask(countTask - 1)};
-
-  const handleKeyUp = (e: KeyboardEvent) => {
-    if(e.code === 'Enter' && newTaskTitle !== '') {
-        onEnter(newTaskTitle);
-        setNewTaskTitle('');
-    }
-}
 
   function handleCreateNewTask() {
     
@@ -72,9 +61,14 @@ export function TaskList({ onEnter }: Props) {
 
     const filterTasks = tasks.filter(task => task.id !== id);
 
+    for(let i in tasks) {
+      if (tasks[i].id === id && tasks[i].isComplete === true) {
+        setCountTaskDone(countTaskDone - 1)
+      }
+    }
+
     setTasks(filterTasks);
-    DecreaseTaskByRemove()
-    setCountTaskDone(countTaskDone - 1);
+    DecreaseTaskByRemove();
   }
 
   return (
@@ -86,7 +80,6 @@ export function TaskList({ onEnter }: Props) {
             placeholder="Adicione uma nova tarefa" 
             onChange={(e) => setNewTaskTitle(e.target.value)}
             value={newTaskTitle}
-            onKeyUp={handleKeyUp}
             required
           />
           <button type="submit" data-testid="add-task-button" onClick={handleCreateNewTask}>
