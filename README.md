@@ -67,8 +67,8 @@ $ yarn install
 ou
 $ npm install
 # Executando o Projeto
-$ yarn start 
+$ yarn dev 
 ou
-$ npm start
+$ npm run dev
 # Acesse http://localhost:3000 no seu navagador
 ```
