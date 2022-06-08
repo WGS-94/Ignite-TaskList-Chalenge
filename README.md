@@ -49,13 +49,11 @@ Nesse desafio, você vai desenvolver uma aplicação de controle de tarefas no e
 
 * [ReactJS](https://pt-br.reactjs.org/tutorial/tutorial.html)
   * [Vite](https://www.npmjs.com/package/styled-components) - Biblioteca CSS in JS
-  * [x](https://www.npmjs.com/package/axios)
-  * [x](https://www.npmjs.com/package/react-modal)
-  * [x](https://www.npmjs.com/package/polished)
+  * [phosphoricons](https://phosphoricons.com/)
 * [TypeScript](https://www.typescriptlang.org/)
 
-### Tools para criar API Fake
- * [MirageJS]()
+<!--### Tools para criar API Fake
+ * [MirageJS]()-->
 
 ## ⚙️ Rodando o Projeto
 ```bash
