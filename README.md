@@ -31,17 +31,19 @@ Nesse desafio, você vai desenvolver uma aplicação de controle de tarefas no e
 <!--https://www.figma.com/file/8n9339j7p3LTzWyZdVM9C3/ToDo-List-(Copy)?node-id=43%3A88 -->
 
 ## 🖼️ Imagens do Desafio
-<!--
+
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/171734865-0a9a1673-8cc5-4289-afe1-8f8e736359fb.PNG">
+  <img src="https://user-images.githubusercontent.com/87288949/172730389-8014e84e-6f3f-48a8-8529-a55b4b2b49b6.PNG">
 </div>
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/171734884-05790807-3c12-43ab-a301-9052cb3429c4.PNG">
+  <img src="https://user-images.githubusercontent.com/87288949/172730383-cfb3998e-3324-42df-ba91-a389bb1a21af.PNG">
 </div>
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/171734894-721b47ca-59b6-44ba-a5cc-caeac6c16340.PNG">
+  <img src="https://user-images.githubusercontent.com/87288949/172730390-a5179d12-954c-47ec-b328-edd8ecff4fb6.PNG">
 </div>
--->
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/87288949/172730388-c4d2805d-834a-4605-a2d6-7dfedb7602cc.PNG">
+</div>
 
 ## 🧰 Tecnologias e Bibliotecas
 
