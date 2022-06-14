@@ -30,6 +30,10 @@ Nesse desafio, você vai desenvolver uma aplicação de controle de tarefas no e
 
 <!--https://www.figma.com/file/8n9339j7p3LTzWyZdVM9C3/ToDo-List-(Copy)?node-id=43%3A88 -->
 
+## 🔖 Layout
+
+Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List/duplicate). Lembrando que você  precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
+
 ## 🖼️ Imagens do Desafio
 
 <div align="center">
