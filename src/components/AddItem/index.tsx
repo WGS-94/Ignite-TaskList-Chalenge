@@ -1,9 +1,10 @@
+import { PlusCircle } from 'phosphor-react';
 import { useState, KeyboardEvent } from 'react';
 
 import './style.css';
 
 type AddItemProps = {
-  onEnter: (taskName: string) => void
+  onEnter: (taskTitle: string) => void
 }
 
 export default function AddItem({ onEnter }: AddItemProps) {
@@ -18,16 +19,14 @@ export default function AddItem({ onEnter }: AddItemProps) {
 }
 
   return (
-    <header>
-        <div className="input-group">
-          <input 
-            type="text" 
-            placeholder="Adicione uma nova tarefa" 
-            onChange={(e) => setNewTaskTitle(e.target.value)}
-            value={newTaskTitle}
-            onKeyUp={handleKeyUp}
-          />
-        </div>
-      </header>
+    <div className='containerInput'>
+      <input 
+        type="text" 
+        placeholder="Adicione uma nova tarefa" 
+        onChange={(e) => setNewTaskTitle(e.target.value)}
+        value={newTaskTitle}
+        onKeyUp={handleKeyUp}
+      />
+    </div>
   );
 }

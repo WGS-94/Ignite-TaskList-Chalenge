@@ -24,15 +24,15 @@ export default function App() {
   const IncrementTaskByCreate = () => { setCountTask(countTask + 1)};
   const DecreaseTaskByRemove = () => { setCountTask(countTask - 1)};
 
-  function handleCreateNewTask(taskName: string) {
+  function handleCreateNewTask(taskTitle: string) {
     
-    if (!taskName || /^\s*$/.test(taskName)) {
+    if (!taskTitle || /^\s*$/.test(taskTitle)) {
       return;
     }
 
     const newTask = {
       id: Math.floor(Math.random() * 1000),
-      title: taskName,
+      title: taskTitle,
       isComplete: false
     }
 
@@ -80,13 +80,20 @@ export default function App() {
       <Header />
       <section className="task-list container">
       
-      <div className="input-group">
-        <AddItem onEnter={handleCreateNewTask}/>
-        <button type="submit" data-testid="add-task-button" onClick={handleCreateNewTask}>
-          Criar
-          <PlusCircle size={24} />
-        </button>
-      </div>
+      <header>
+        <div className="input-group">
+          <AddItem onEnter={handleCreateNewTask}  />
+          <button 
+            type="submit" 
+            data-testid="add-task-button" 
+            onClick={(event: React.MouseEvent<HTMLElement>) => {
+              event.handleCreateNewTask() }}
+          >
+            Criar
+            <PlusCircle size={24} />
+          </button>
+        </div>
+      </header>
       
 
       <div className="task-created-and-done">
