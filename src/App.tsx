@@ -37,9 +37,8 @@ export default function App() {
     }
 
     setTasks(oldState => [...oldState, newTask]);
-    
-    //setNewTaskTitle('');
     IncrementTaskByCreate();
+    
   }
 
   function handleToggleTaskDone(id: number) {
@@ -86,8 +85,7 @@ export default function App() {
           <button 
             type="submit" 
             data-testid="add-task-button" 
-            onClick={(event: React.MouseEvent<HTMLElement>) => {
-              event.handleCreateNewTask() }}
+            onClick={handleCreateNewTask as any}
           >
             Criar
             <PlusCircle size={24} />
@@ -122,6 +120,7 @@ export default function App() {
                   type="checkbox" 
                   checked={task.isComplete}
                   onClick={() => handleToggleTaskDone(task.id)}
+                  readOnly
                 />
                 <span className="checkmark"></span>
               </label>
