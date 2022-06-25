@@ -7,7 +7,7 @@
 <h1 align="center"> RocketSeat 🔥 Ignite ReactJS Chalenge</h1>
 
 <!-- Subtitle -->
-<h2> Módulo 2 - Praticando os conceitos do ReactJS usando Typescript </h2>
+<h2> Desafio 02 - Praticando os conceitos do ReactJS usando Typescript </h2>
 
 <!-- Badges 
 <p align="center">
@@ -30,30 +30,34 @@ Nesse desafio, você vai desenvolver uma aplicação de controle de tarefas no e
 
 <!--https://www.figma.com/file/8n9339j7p3LTzWyZdVM9C3/ToDo-List-(Copy)?node-id=43%3A88 -->
 
+## 🔖 Layout
+
+Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List/duplicate). Lembrando que você  precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
+
 ## 🖼️ Imagens do Desafio
-<!--
+
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/171734865-0a9a1673-8cc5-4289-afe1-8f8e736359fb.PNG">
+  <img src="https://user-images.githubusercontent.com/87288949/172730389-8014e84e-6f3f-48a8-8529-a55b4b2b49b6.PNG">
 </div>
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/171734884-05790807-3c12-43ab-a301-9052cb3429c4.PNG">
+  <img src="https://user-images.githubusercontent.com/87288949/172730383-cfb3998e-3324-42df-ba91-a389bb1a21af.PNG">
 </div>
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/171734894-721b47ca-59b6-44ba-a5cc-caeac6c16340.PNG">
+  <img src="https://user-images.githubusercontent.com/87288949/172730390-a5179d12-954c-47ec-b328-edd8ecff4fb6.PNG">
 </div>
--->
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/87288949/172730388-c4d2805d-834a-4605-a2d6-7dfedb7602cc.PNG">
+</div>
 
 ## 🧰 Tecnologias e Bibliotecas
 
 * [ReactJS](https://pt-br.reactjs.org/tutorial/tutorial.html)
   * [Vite](https://www.npmjs.com/package/styled-components) - Biblioteca CSS in JS
-  * [x](https://www.npmjs.com/package/axios)
-  * [x](https://www.npmjs.com/package/react-modal)
-  * [x](https://www.npmjs.com/package/polished)
+  * [phosphoricons](https://phosphoricons.com/) - Biblioteca for Icons in JS
 * [TypeScript](https://www.typescriptlang.org/)
 
-### Tools para criar API Fake
- * [MirageJS]()
+<!--### Tools para criar API Fake
+ * [MirageJS]()-->
 
 ## ⚙️ Rodando o Projeto
 ```bash
@@ -61,14 +65,14 @@ Nesse desafio, você vai desenvolver uma aplicação de controle de tarefas no e
 $ git clone https://github.com/WGS-94/Ignite-TaskList-Chalenge
 # ou use a opção de download.
 # Acesse a pasta Ignite-TaskList-Chalenge
-$ cd Dt-Money-Transation
+$ cd Ignite-TaskList-Chalenge
 # Instale as dependências
 $ yarn install
 ou
 $ npm install
 # Executando o Projeto
-$ yarn start 
+$ yarn dev 
 ou
-$ npm start
+$ npm run dev
 # Acesse http://localhost:3000 no seu navagador
 ```
