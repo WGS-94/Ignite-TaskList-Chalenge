@@ -7,7 +7,7 @@
 <h1 align="center"> RocketSeat 🔥 Ignite ReactJS Chalenge</h1>
 
 <!-- Subtitle -->
-<h2> Módulo 2 - Praticando os conceitos do ReactJS usando Typescript </h2>
+<h2> Desafio 02 - Praticando os conceitos do ReactJS usando Typescript </h2>
 
 <!-- Badges 
 <p align="center">
