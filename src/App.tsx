@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { PlusCircle, Trash } from 'phosphor-react';
 
 import { Header } from './components/Header';
 //import { TaskList } from './components/TaskList';
 import { Transition } from './components/Transition';
+import AddItem from './components/AddItem';
 
 import './globalStyle.css'
 import './style.css';
-import AddItem from './components/AddItem';
+
 
 interface Task {
   id: number;
@@ -15,12 +16,12 @@ interface Task {
   isComplete: boolean;
 }
 
+
 interface ButtonProps {
-  handleCreateNewTask: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  id: number;
+  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export default function App(props: ButtonProps) {
+export default function App(btnProp: ButtonProps) {
 
   const [tasks, setTasks] = useState<Task[]>([]);
   const [countTask, setCountTask]= useState(0);
@@ -90,7 +91,7 @@ export default function App(props: ButtonProps) {
           <button 
             type="submit" 
             data-testid="add-task-button" 
-            onClick={props.handleCreateNewTask}
+            onClick={btnProp.handleClick}
           >
             Criar
             <PlusCircle size={24} />

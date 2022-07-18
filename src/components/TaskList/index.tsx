@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import { PlusCircle, Trash } from 'phosphor-react';
 import { Transition } from '../Transition';
 
@@ -20,7 +20,9 @@ export function TaskList() {
   const IncrementTaskByCreate = () => { setCountTask(countTask + 1)};
   const DecreaseTaskByRemove = () => { setCountTask(countTask - 1)};
 
-  function handleCreateNewTask() {
+  function handleCreateNewTask(event: FormEvent) {
+
+    event.preventDefault();
     
     if (!newTaskTitle || /^\s*$/.test(newTaskTitle)) {
       return;
@@ -74,7 +76,7 @@ export function TaskList() {
   return (
     <section className="task-list container">
       <header>
-        <div className="input-group">
+        <form onSubmit={handleCreateNewTask} className="input-group">
           <input 
             type="text" 
             placeholder="Adicione uma nova tarefa" 
@@ -82,11 +84,15 @@ export function TaskList() {
             value={newTaskTitle}
             required
           />
-          <button type="submit" data-testid="add-task-button" onClick={handleCreateNewTask}>
+          <button 
+            type="submit" 
+            data-testid="add-task-button"
+            onClick={handleCreateNewTask}
+          >
             Criar
             <PlusCircle size={24} />
           </button>
-        </div>
+        </form>
       </header>
 
       <div className="task-created-and-done">
