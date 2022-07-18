@@ -23,14 +23,19 @@
   flex: 1;
   color: var(--gray-100);
   background: var(--gray-500);
-  border: 1px solid var(--gray-700);
+  border: none;
   border-radius: 0.5rem;
   padding: 0 1rem;
   font-size: 1rem;
+  outline: none;
 }
 
 .newTaskForm input::placeholder {
   color: var(--gray-300);
+}
+
+.newTaskForm input:focus {
+  border: 2px solid var(--blue-dark);
 }
 
 .newTaskForm button {

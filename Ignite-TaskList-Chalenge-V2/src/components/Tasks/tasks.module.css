@@ -10,7 +10,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
 }
 
 .header > div {
@@ -29,7 +28,7 @@
   color: var(--purple);
 }
 
-.header span {
+.header span, b {
   background: var(--gray-400);
   color: var(--gray-200);
   padding: 3px 9px;
@@ -39,13 +38,14 @@
 }
 
 .list {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
 .empty {
-  margin-top: 4rem;
+  margin-top: 1rem;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -53,6 +53,10 @@
   gap: 1rem;
   color: var(--gray-300);
   text-align: center;
+  padding: 3rem;
+
+  border-top: 1px solid var(--gray-300);
+  border-radius: 8px;
 }
 
 .empty svg {

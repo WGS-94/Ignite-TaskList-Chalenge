@@ -23,9 +23,15 @@ export function Tasks({ tasks, onComplete, onDelete }: Props) {
 
         <div>
           <p className={styles.textPurple}>Concluídas</p>
-          <span>
-            {completedTasks} de {tasksQuantity}
-          </span>
+          {tasksQuantity > 0 ? 
+            <span>
+              {completedTasks} de {tasksQuantity}
+            </span>
+          : (
+            <b>0</b>
+          )
+          }
+          
         </div>
       </header>
 
