@@ -65,8 +65,8 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 # Clone este repositório para a pasta anterior
 $ git clone https://github.com/WGS-94/Ignite-TaskList-Chalenge
 # ou use a opção de download.
-# Acesse a pasta Ignite-TaskList-Chalenge
-$ cd Ignite-TaskList-Chalenge
+# Acesse a pasta Ignite-TaskList-Chalenge-V1 ou  Ignite-TaskList-Chalenge-V2
+$ cd Ignite-TaskList-Chalenge-V1 ou cd  Ignite-TaskList-Chalenge-V2
 # Instale as dependências
 $ yarn install
 ou
