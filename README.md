@@ -52,7 +52,7 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 ## 🧰 Tecnologias e Bibliotecas
 
 * [ReactJS](https://pt-br.reactjs.org/tutorial/tutorial.html)
-  * [Vite](https://www.npmjs.com/package/styled-components)
+  * [Vite](https://vitejs.dev/guide/)
   * [styled-components](https://www.npmjs.com/package/styled-components)
   * [phosphoricons](https://phosphoricons.com/)
 * [TypeScript](https://www.typescriptlang.org/)
